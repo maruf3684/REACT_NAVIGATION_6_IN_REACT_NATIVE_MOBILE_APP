@@ -39,7 +39,7 @@ const HomeScreen = ({navigation}) => {
             marginBottom: 15,
           }}>
           <Text
-            style={{fontSize: 16, fontFamily: 'Roboto-Medium', marginLeft: 1}}>
+            style={{fontSize: 18, fontFamily: 'Roboto-Medium', marginLeft: 1,color: '#0aada8'}}>
             Maruf Hasan
           </Text>
           <TouchableOpacity onPress={() => navigation.openDrawer()}>
@@ -90,16 +90,19 @@ const HomeScreen = ({navigation}) => {
         </View>
 
         {/* carousel */}
+        <View style={{flexDirection:'row',justifyContent:'center'}}>
         <Carousel
           ref={c => {
             this._carousel = c;
           }}
           data={sliderData}
           renderItem={renderBanner}
-          sliderWidth={windowWidth - 40}
-          itemWidth={300}
+          sliderWidth={windowWidth-49}
+          itemWidth={290}
           loop={true}
         />
+        </View>
+ 
 
         {/* switch */}
         <View style={{marginTop: 15}}>
